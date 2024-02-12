@@ -67,7 +67,7 @@ const News = (props) => {
 
 
     return (
-        <div className='container my-3'>
+        <div className='container my-3' id= "home">
             <h1 style={{ fontSize: '3rem', margin: '5rem 0rem 2rem 0rem' }}>NewsTime - Top {capatalizeFunc(props.category)} Headlines</h1>
             {loading && <LoadingSpinner />}
             <InfiniteScroll
@@ -76,7 +76,7 @@ const News = (props) => {
                     hasMore={articles.length !== totalResults}
                     loader={<LoadingSpinner/>}
                 >
-            <div className='row my-2 mx-2'>
+            <div className='row my-2 mx-2' id= "content">
                 {articles.map((element) => {
                     return <div className='col-md-4' key={element.url}>
                         <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} date={element.publishedAt} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author ? element.author : "Unknown"} />

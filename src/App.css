@@ -1,1 +1,4 @@
-
+#root{
+    background-image: url('./Image/NewsTime-bg.webp');
+    background-size: cover;
+}
